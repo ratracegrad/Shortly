@@ -1,9 +1,15 @@
 <div id='signin'>
   <h1>signin</h1>
   <form name="signinForm" ng-submit='signin()'>
-    <input type='text'ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
-    <button>signin</button>
+    <label for="username">Username:</label>
+    <input type='text'ng-model='user.username' id="username" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" ng-model='user.password' id="password" required>
+
+    <div ng-show="error.message">{{error.message}}</div>
+
+    <button>Sign In</button>
   </form>
-  <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
+  or <a href="#/signup">Create an Account</a>
 </div>
+

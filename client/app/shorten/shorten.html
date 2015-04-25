@@ -1,9 +1,21 @@
-<div id='container'>
-<!-- Your code here -->
-
-  <input class='text' type='text' name='url' ng-model='newLink'>
-  <button ng:click="addLink(newLink)">Shorten</button>
-  <img class='spinner' src='/assets/spiffygif_46x46.gif'>
-  <div class='message'></div>
-
+<div class='navigation'>
+  <ul>
+    <li><a href='#/links' class='index'>All Links</a></li>
+    <li><a href='#/shorten' class='create'>Shorten</a></li>
+    <li><a href='#/logout' class='logout'>Logout</a></li>
+  </ul>
 </div>
+
+<div id='container' ng-controller="ShortenController">
+<!-- Your code here -->
+  <form name="shortenForm" ng-submit='addLink()'>
+    <label for="url">URL:</label>
+    <input class='text' type='url' placeholder="Enter URL here" name='url' ng-model='link.url' id="url" required >
+
+    <span ng-show="shortenForm.url.$error.pattern">Not a valid URL!</span>
+
+    <button>Shorten</button>
+    <div class='message'></div>
+  </form>
+</div>
+

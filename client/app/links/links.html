@@ -1,3 +1,11 @@
+<div class='navigation'>
+  <ul>
+    <li><a href='#/links' class='index'>All Links</a></li>
+    <li><a href='#/shorten' class='create'>Shorten</a></li>
+    <li><a href='#/logout' class='logout'>Logout</a></li>
+  </ul>
+</div>
+
 <div id='container' ng-controller="LinksController">
   <!-- Your html here -->
   <h3 ng-if="!data.links.length">You have no Links shortened!</h3>
@@ -5,9 +13,9 @@
   <ul>
     <li ng-repeat="link in data.links">
       <div class='info'>
-        <img src='/assets/redirect_icon.png'/>{{ link.title }} 
+        <a href='{{ link.base_url }}/api/links/{{ link.code }}'><img src='/assets/redirect_icon.png'/></a>{{ link.title }} 
         <div class='original'>{{ link.url }}</div>
-        <a href='{{ link.base_url }}/{{ link.code }}'>{{ link.base_url}}/{{ link.code }}</a>
+        <a href='{{ link.base_url }}/api/links/{{ link.code }}'>{{ link.base_url}}/api/links/{{ link.code }}</a>
         <div class='links'><span class='visits'>{{ link.visits }}</span>Visits</div>
       </div>
     </li>

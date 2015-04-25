@@ -12,8 +12,6 @@ angular.module('shortly.links', [])
 
     
   };
-  console.log(Links);
-  console.log('----------');
 
   $scope.getLinks();
 

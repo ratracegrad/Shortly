@@ -1,13 +1,17 @@
 body {
   margin: 0;
   margin-top: 10px;
-  font-family: arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 a {
-  color: #333;
+  color: #00e;
   font-size: 14px;
   text-decoration: none;
+}
+a:visited {
+  color: #551a8b;
 }
 
 h1 {
@@ -148,4 +152,19 @@ input[type=url]:focus {
 
 .logout {
   float: right;
+}
+
+button {
+  background: #69ad31;
+  padding: 8px 16px;
+  box-shadow: 0 1.5px 0 0 #070;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-style: bold;
+  font-size: 18px;
+}
+
+label {
+  padding-top: 20px;
 }
