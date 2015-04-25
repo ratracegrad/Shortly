@@ -1,3 +1,10 @@
-<div id='container'>
+<div id='container' ng-controller="LinksController">
   <!-- Your html here -->
+  <h3 ng-if="!data.links.length">You have no Links shortened!</h3>
+
+  <ul>
+    <li ng-repeat="link in data.links">
+        <h3>{{ link.url }}</h3>
+    </li>
+  </ul>
 </div>
