@@ -9,9 +9,9 @@
 <div id='container' ng-controller="LinksController">
   <!-- Your html here -->
   <h3 ng-if="!data.links.length">You have no Links shortened!</h3>
-
+  <input type="text" ng-model="search" placeholder="search">
   <ul>
-    <li ng-repeat="link in data.links">
+    <li ng-repeat="link in data.links | filter:search | orderBy:'-visits'">
       <div class='info'>
         <a href='{{ link.base_url }}/api/links/{{ link.code }}'><img src='/assets/redirect_icon.png'/></a>{{ link.title }} 
         <div class='original'>{{ link.url }}</div>
