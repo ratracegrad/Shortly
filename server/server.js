@@ -10,7 +10,7 @@ var uristring =
 
 // mongoose.connect('mongodb://localhost/shortly'); // connect to mongo database named shortly
 
-mongoose.connect(uristring, function (err, res) {
+mongoose.connect(uristring, {}, function (err, res) {
   if (err) { 
     console.log ('ERROR connecting to: ' + uristring + '. ' + err);
   } else {
