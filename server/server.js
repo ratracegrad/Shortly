@@ -8,7 +8,7 @@ var uristring =
   process.env.MONGOHQ_URL || 
   'mongodb://localhost/shortly';
 
-// mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/shortly'); // connect to mongo database named shortly
+// mongoose.connect('mongodb://localhost/shortly'); // connect to mongo database named shortly
 
 mongoose.connect(uristring, function (err, res) {
   if (err) { 
