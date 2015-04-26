@@ -3,10 +3,20 @@
 
 var app = express();
 
+var uristring = 
+  process.env.MONGOLAB_URI || 
+  process.env.MONGOHQ_URL || 
+  'mongodb://localhost/shortly';
+
 // mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/shortly'); // connect to mongo database named shortly
 
-// mongoose.connect('mongodb://shortly:ga86grad@ds047911.mongolab.com:47911/heroku_app36244996');
-mongoose.connect(process.env.MOGOLAB_URI)
+mongoose.connect(uristring, function (err, res) {
+  if (err) { 
+    console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+    console.log ('Succeeded connected to: ' + uristring);
+  }
+});
 
 // configure our server with all the middleware and and routing
 require('./config/middleware.js')(app, express);
