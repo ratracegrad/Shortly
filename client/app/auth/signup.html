@@ -1,14 +1,32 @@
 <div id='signup'>
-  <h1>signup</h1>
-  <form name="signupForm" ng-submit='signup()'>
-    <label for="username">Username:</label>
-    <input type='text' ng-model='user.username' id='username' required>
-    <label for="password">Password:</label>
-    <input type="password" ng-model='user.password' id='password' required>
+  <h1 class='signinH1'>Welcome to Shortly</h1>
+  <h3 class='signinH3'>Like Bitly. But Better.</h3>
 
-    <div ng-show="error.message">{{error.message}}</div>
+ <div class='content'>
+  <form name="signupForm" ng-submit='signup()' class='signinForm'>
+    <div class="heading group">
+      <h2>Sign Up</h2>
+      <div class='new-account'>
+        or 
+        <a href="#/signin">Already Have An Account</a>
+      </div>
+    </div>
+      <div class="input">
+        <label for="username">Username:</label>
+        <input type='text'ng-model='user.username' id="username" name="username" required>
+      </div>
+      <div class="input">
+        <label for="password">Password:</label>
+        <input type="password" ng-model='user.password' id="password" required>
+      </div>
+      <div ng-show="error.message" class="alert alert-danger">
+          {{error.message}}
+      </div>
+      <div class="submit signin">
+        <button>Sign Up</button>
+      </div>
     
-    <button>signup</button>
   </form>
-  <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
+</div>
+
 </div>

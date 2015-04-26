@@ -3,6 +3,7 @@ body {
   margin-top: 10px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
+  background: #D6DDE2;
 }
 
 a {
@@ -21,8 +22,8 @@ h1 {
 
 .navigation {
   width: 100%;
-  height: 40px;
-  background-color: #eee;
+  height: 50px;
+  background-color: #43ab2e;
 }
 
 .navigation ul {
@@ -37,20 +38,26 @@ h1 {
 
 .navigation li a {
   width: 100px;
-  height: 20px;
-  line-height: 20px;
+  height: 32px;
+  line-height: 32px;
   padding: 10px;
   display: block;
   text-align: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .navigation li a:hover {
-  background-color: #ddd;
+  background-color: #6BE39F;
+  color: #858585;
 }
 
 .navigation li a.selected {
-  background-color: #ccc;
+  background-color: #6BE39F;
+  color: #858585;
 }
+
 
 #container {
   clear: both;
@@ -150,9 +157,7 @@ input[type=url]:focus {
   clear: both;
 }
 
-.logout {
-  float: right;
-}
+
 
 button {
   background: #69ad31;
@@ -165,6 +170,87 @@ button {
   font-size: 18px;
 }
 
+
+/* ---- Formatting for Signup and Signin Pages ---- */
+.signinH1 {
+  text-align: center;
+  font-size: 60px;
+  line-height: 1.0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.signinH3 {
+  text-align: center;
+  color: #858585;
+  font-size: 20px;
+  padding-bottom: 40px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.signinForm {
+  width: 340px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0 1px 1px 0 grey;
+}
+.input {
+  margin: 15px 0;
+  vertical-align: baseline;
+}
+.input>label {
+  display: block;
+  color: #606060;
+  font-style: 16px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
 label {
-  padding-top: 20px;
+  cursor: default;
+}
+.input>input {
+  border: 2px solid #cacaca;
+  padding: 6px;
+  width: 94%;
+}
+.submit.signin {
+  display: inline;
+  margin-right: 8px;
+}
+h2 {
+  font-size: 30px;
+  float: left;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.new-account {
+  float: right;
+  font-size: 14px;
+}
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+/* ---- Alert message when error on signin or signup or link shortner */
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.search {
+  margin-left: 10px;
 }

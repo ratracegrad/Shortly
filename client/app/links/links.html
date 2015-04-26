@@ -1,27 +1,32 @@
+<h1 class='signinH1'>Welcome to Shortly</h1>
+<h3 class='signinH3'>Like Bitly. But Better.</h3>
+
 <div class='navigation'>
   <ul>
     <li><a href='#/links' class='index'>All Links</a></li>
     <li><a href='#/shorten' class='create'>Shorten</a></li>
-    <li><a href='#/logout' class='logout'>Logout</a></li>
+    <li><a href='#/logout' id='logout'>Logout</a></li>
   </ul>
 </div>
 
 <div id='container' ng-controller="LinksController">
   <!-- Your html here -->
   <h3 ng-if="!data.links.length">You have no Links shortened!</h3>
-  <input type="text" ng-model="search" placeholder="search">
-  <ul>
-    <li ng-repeat="link in data.links | filter:search | orderBy:'-visits'">
-      <div class='info'>
-        <a href='{{ link.base_url }}/api/links/{{ link.code }}'><img src='/assets/redirect_icon.png'/></a>{{ link.title }} 
-        <div class='original'>{{ link.url }}</div>
-        <a href='{{ link.base_url }}/api/links/{{ link.code }}'>{{ link.base_url}}/api/links/{{ link.code }}</a>
-        <div class='links'><span class='visits'>{{ link.visits }}</span>Visits</div>
+  <input type="text" ng-model="search" placeholder="search" class="search">
+
+  <div ng-repeat="link in data.links | filter:search | orderBy:'-visits'" class="link">
+    <img src='/assets/redirect_icon.png'/>
+    <div class='info'>
+      <div class="visits">
+        <span class="count ng-binding">{{ link.visits }}</span> 
+         Visits
       </div>
-    </li>
-  </ul>
-
+      <div class="title ng-binding">
+        {{ link.title }}
+      </div>
+      <div class='original ng-binding'>{{ link.url }}</div>
+      <a href='{{ link.base_url }}/api/links/{{ link.code }}' class="ng-binding">{{ link.base_url}}/api/links/{{ link.code }}</a>
+    </div>
+  </div>
   
-  
-
 </div>

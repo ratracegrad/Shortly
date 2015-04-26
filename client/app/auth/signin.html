@@ -1,15 +1,31 @@
 <div id='signin'>
-  <h1>signin</h1>
-  <form name="signinForm" ng-submit='signin()'>
-    <label for="username">Username:</label>
-    <input type='text'ng-model='user.username' id="username" name="username" required>
-    <label for="password">Password:</label>
-    <input type="password" ng-model='user.password' id="password" required>
+  <h1 class='signinH1'>Welcome to Shortly</h1>
+  <h3 class='signinH3'>Like Bitly. But Better.</h3>
 
-    <div ng-show="error.message">{{error.message}}</div>
-
-    <button>Sign In</button>
-  </form>
-  or <a href="#/signup">Create an Account</a>
+  <div class='content'>
+    <form name="signinForm" ng-submit='signin()' class='signinForm'>
+      <div class="heading group">
+        <h2>Sign In</h2>
+        <div class='new-account'>
+          or 
+          <a href="#/signup">Create an Account</a>
+        </div>
+      </div>
+        <div class="input">
+          <label for="username">Username:</label>
+          <input type='text'ng-model='user.username' id="username" name="username" required>
+        </div>
+        <div class="input">
+          <label for="password">Password:</label>
+          <input type="password" ng-model='user.password' id="password" required>
+        </div>
+        <div ng-show="error.message" class="alert alert-danger">
+          {{error.message}}
+        </div>
+        <div class="submit signin">
+          <button>Sign In</button>
+        </div>
+      
+    </form>
+  </div>
 </div>
-
