@@ -4,7 +4,7 @@ URL shortner written in Angular, NodeJS, Express and Twitter Bootstrap with Mong
 The URL Shortner is served up using a Node Express server.  
 
 ## Operation
-To shorten URL links you must first create an account. Once your accoutn is created you can enter 
+To shorten URL links you must first create an account. Once your account is created you can enter 
 your favorite URL and click `Shorten` button. A shortened version of the URL will be created for
 you. All of the URLs that you have shorten are saved in a MongoDB database so you can easily
 log back into your account at a later date to retrieve the shorten URL.
