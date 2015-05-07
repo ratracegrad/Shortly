@@ -1,13 +1,31 @@
 {
   "name": "shortly-angular",
-  "version": "0.0.0",
-  "description": "",
-  "main": "app.js",
+  "version": "1.0.0",
+  "description": "URL shortner written in Angular, NodeJS, Express and Twitter Bootstrap",
+  "main": "index.js",
+  "author": "Jennifer Bland",
+  "license": "Copyright 2015, Jennifer Bland. All rights reserved.",
   "scripts": {
-    "test": "karma start --browsers PhantomJS"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ratracegrad/Shortly.git"
+  },
+  "keywords": [
+    "jennifer",
+    "bland",
+    "shortly",
+    "Angular",
+    "nodejs",
+    "express",
+    "bootstrap"
+  ],
+  "bugs": {
+    "url": "https://github.com/ratracegrad/Shortly/issues"
+  },
+  "homepage": "https://github.com/ratracegrad/Shortly",
   "devDependencies": {
     "browser-sync": "^1.5.7",
     "clone-stats": "0.0.1",
@@ -18,17 +36,7 @@
     "gulp-karma": "0.0.4",
     "gulp-nodemon": "^1.0.4",
     "gulp-shell": "^0.2.7",
-    "jshint-stylish": "^0.2.0",
-    "karma": "^0.12.16",
-    "karma-chrome-launcher": "^0.1.4",
-    "karma-cli": "0.0.4",
-    "karma-jasmine": "^0.1.5",
-    "karma-mocha": "^0.1.4",
-    "karma-nested-reporter": "^0.1.1",
-    "karma-nyan-reporter": "0.0.43",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "karma-unicorn-reporter": "^0.1.4",
-    "mocha": "^1.20.1"
+    "jshint-stylish": "^0.2.0"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
