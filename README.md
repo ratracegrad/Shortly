@@ -33,3 +33,8 @@ List of URLs that have been shorten
 4. Launch Express server with `node index.js`
 5. Create an account
 6. Enter URLs to shorten
+
+
+## Alternative Version
+The original version of Shortly was written using an Express server and a Sqlite database.
+[The Express version is here.](https://github.com/ratracegrad/Shortly-Expressy)
