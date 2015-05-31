@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Shortly](#shortly)
+  - [Technology Stack](#technology-stack)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Operation](#operation)
+  - [Live Demonstration](#live-demonstration)
+  - [Screenshots](#screenshots)
+  - [Alternative Version](#alternative-version)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Shortly
 > URL shortner written in Angular, NodeJS, Express and Twitter Bootstrap with MongoDB database.
 
