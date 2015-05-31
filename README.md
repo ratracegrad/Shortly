@@ -1,7 +1,27 @@
 # Shortly
-URL shortner written in Angular, NodeJS, Express and Twitter Bootstrap with MongoDB database.
+> URL shortner written in Angular, NodeJS, Express and Twitter Bootstrap with MongoDB database.
 
-The URL Shortner is served up using a Node Express server.  
+## Technology Stack
+1. AngularJS
+2. Node.js
+3. Express
+4. MongoDB
+5. Express
+
+## Requirements
+- AngularJS
+- Node.js
+- Express
+- Twitter Bootstrap
+- MongoDB
+
+## Installation
+1. Download the repository
+2. Run `npm install`
+3. Launch your mongoDB if on local or make sure you connect to a mongoDB database if hosted outside of local
+4. Launch Express server with `node index.js`
+5. Create an account
+6. Enter URLs to shorten
 
 ## Operation
 To shorten URL links you must first create an account. Once your account is created you can enter 
@@ -13,6 +33,9 @@ Open the game in your browser. Decide whether you want to hit or stand based on 
 been dealt. Once the player stands, the dealer plays. The winner is the player closest to 21 without
 going over.
 
+## Live Demonstration
+[You can see this repo live here](http://jb-shortly-angular.herokuapp.com/#/signin).  The demo is hosted on Heroku.
+
 ## Screenshots
 Login Screen to Shortly
 ![Login Screen](http://jenniferbland.com/Shortly/screenshot-login.png)
@@ -22,18 +45,6 @@ Prompt to enter URLs to shorten
 
 List of URLs that have been shorten
 ![Login Screen](http://jenniferbland.com/Shortly/screenshot-shortened-links.png)
-
-## Live Preview
-[You can see this repo live here](http://jb-shortly-angular.herokuapp.com/#/signin).  The demo is hosted on Heroku.
-
-## Installation
-1. Download the repository
-2. Run `npm install`
-3. Launch your mongoDB if on local or make sure you connect to a mongoDB database if hosted outside of local
-4. Launch Express server with `node index.js`
-5. Create an account
-6. Enter URLs to shorten
-
 
 ## Alternative Version
 The original version of Shortly was written using an Express server and a Sqlite database.
